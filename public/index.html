@@ -2,18 +2,24 @@
 <html>
   <head>
     <title>Home Dashboard</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
   <body>
     <h1>Home Dashboard</h1>
-    <h2>Temperature</h2>
-    <ul>
-      <li><span id="celsius">0</span> &deg;C</li>
-      <li><span id="fahrenheit">0</span> &degF</li>
-    </ul>
-    <p id="timestamp"></p>
+    <button id="reload">Reload now</button>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/xivelyjs-1.0.4.min.js"></script>
-    <script src="js/main.js"></script>
+    <h2>Temperature</h2>
+    <div class="graph" id="temperature-graph"></div>
+    <dl id="temperature-current">
+      <dt>Celsius</dt>
+      <dd id="temperature-current-celsius"></dd>
+      <dt>Fahrenheit</dt>
+      <dd id="temperature-current-fahrenheit"></dd>
+      <dt>As of</dt>
+      <dd id="temperature-current-timestamp"></dd>
+    </dl>
   </body>
 </html>

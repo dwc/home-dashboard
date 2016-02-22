@@ -1,0 +1,27 @@
+body {
+    font-family: sans-serif;
+}
+
+.graph .axis path, .graph .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.graph .x.axis path {
+    display: none;
+}
+
+.graph .line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+
+dl dt {
+    font-weight: bold;
+}
+
+#temperature-graph {
+    float: left;
+}
