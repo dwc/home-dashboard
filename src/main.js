@@ -66,11 +66,7 @@ $(document).on("ready", function() {
   };
 
   var loadData = function(config) {
-    var defaults = {
-      precision: 5
-    };
-
-    config = $.extend({}, defaults, config);
+    console.log("Loading data", config);
 
     d3.json(config.apiUrl)
       .header("x-api-key", config.apiKey)
@@ -105,11 +101,18 @@ $(document).on("ready", function() {
   };
 
   var init = function() {
+    var defaults = {
+      precision: 5,
+      refreshInterval: 300
+    };
+
     $.getJSON("home-dashboard.json", function(config) {
+      config = $.extend({}, defaults, config);
+
       var load = function() { loadData(config) };
 
       load();
-      window.setTimeout(load, 300);
+      window.setInterval(load, config.refreshInterval * 1000);
       $("#reload").on("click", load);
     });
   };
