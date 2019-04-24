@@ -66,8 +66,6 @@ $(document).ready(function() {
   };
 
   var loadData = function(config) {
-    console.log("Loading data", config);
-
     d3.json(config.apiUrl)
       .header("x-api-key", config.apiKey)
       .get(function(error, json) {
