@@ -1,4 +1,4 @@
-$(document).on("ready", function() {
+$(document).ready(function() {
   var convertToFahrenheit = function(celsius) {
     return celsius * 1.8 + 32;
   };
